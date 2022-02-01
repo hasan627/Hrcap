@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="1" name="Hrcap Automation" annotations="JDK" parallel="tests">
+  
+  <test name="ClientAdminCreate">
+	 <classes>
+	   <class name="admin.ClientAdminCreate"/>
+	 </classes>
+   </test>
+   
+  <test name="CompanyCreate">
+     <classes>
+       <class name="admin.CompanyCreate"/>
+     </classes>
+   </test>
+   
+   <test name="AutomationIntegrationSetup">
+     <classes>
+       <class name="configuration.AutomationIntegration"/>
+     </classes>
+   </test>
+   
+   <test name="Master Data Setup">
+     <classes>
+       <class name="configuration.Setup"/> 
+     </classes>
+   </test>
+   
+   <test name="Employee Create">
+     <classes>
+       <class name="employeeprofile.Employee"/>
+     </classes>
+   </test>
+   
+   <test name="Employee Details">
+     <classes>
+       <class name="employeeprofile.EmployeeDetails"/>
+     </classes>
+   </test>
+   
+</suite> <!-- Suite -->
