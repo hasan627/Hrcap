@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Admin_Part]">
+  <test name="Configure(failed)">
+    <classes>
+      <class name="admin.ClientAdminCreate">
+        <methods>
+          <include name="ClientAdminLogin"/>
+          <include name="Logout"/>
+          <include name="CreateClientAdmin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- admin.ClientAdminCreate -->
+      <class name="admin.CompanyCreate">
+        <methods>
+          <include name="CreateCompany"/>
+        </methods>
+      </class> <!-- admin.CompanyCreate -->
+      <class name="com.configuratin.AutomationIntegration">
+        <methods>
+          <include name="sessionend"/>
+          <include name="setup"/>
+          <include name="AutomationIntegrationSetup"/>
+        </methods>
+      </class> <!-- com.configuratin.AutomationIntegration -->
+    </classes>
+  </test> <!-- Configure(failed) -->
+</suite> <!-- Failed suite [Admin_Part] -->

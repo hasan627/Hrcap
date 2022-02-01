@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Admin Part]" parallel="tests">
+  <test name="CompanyCreate(failed)" parallel="tests">
+    <classes>
+      <class name="admin.CompanyCreate">
+        <methods>
+          <include name="CreateCompany"/>
+          <include name="ClientAdminLogin"/>
+          <include name="Closed"/>
+        </methods>
+      </class> <!-- admin.CompanyCreate -->
+    </classes>
+  </test> <!-- CompanyCreate(failed) -->
+</suite> <!-- Failed suite [Admin Part] -->

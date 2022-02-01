@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Hrcap Automation]" parallel="tests">
+  <test name="ClientAdminCreate">
+    <classes>
+      <class name="admin.ClientAdminCreate"/>
+    </classes>
+  </test> <!-- ClientAdminCreate -->
+  <test name="CompanyCreate">
+    <classes>
+      <class name="admin.CompanyCreate"/>
+    </classes>
+  </test> <!-- CompanyCreate -->
+  <test name="AutomationIntegrationSetup">
+    <classes>
+      <class name="configuration.AutomationIntegration"/>
+    </classes>
+  </test> <!-- AutomationIntegrationSetup -->
+  <test name="Master Data Setup">
+    <classes>
+      <class name="configuration.Setup"/>
+    </classes>
+  </test> <!-- Master Data Setup -->
+  <test name="Employee Create">
+    <classes>
+      <class name="employeeprofile.Employee"/>
+    </classes>
+  </test> <!-- Employee Create -->
+  <test name="Employee Details">
+    <classes>
+      <class name="employeeprofile.EmployeeDetails"/>
+    </classes>
+  </test> <!-- Employee Details -->
+  <test name="ClientAdminCreate(failed)" parallel="tests">
+    <classes>
+      <class name="configuration.Setup">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- configuration.Setup -->
+      <class name="admin.ClientAdminCreate">
+        <methods>
+          <include name="Logout"/>
+          <include name="CreateClientAdmin"/>
+          <include name="AdminLogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- admin.ClientAdminCreate -->
+      <class name="configuration.AutomationIntegration">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- configuration.AutomationIntegration -->
+      <class name="admin.CompanyCreate">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- admin.CompanyCreate -->
+      <class name="employeeprofile.EmployeeDetails">
+        <methods>
+          <include name="SetupAndLogin"/>
+        </methods>
+      </class> <!-- employeeprofile.EmployeeDetails -->
+    </classes>
+  </test> <!-- ClientAdminCreate(failed) -->
+  <test name="CompanyCreate(failed)" parallel="tests">
+    <classes>
+      <class name="configuration.Setup">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- configuration.Setup -->
+      <class name="admin.ClientAdminCreate">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- admin.ClientAdminCreate -->
+      <class name="configuration.AutomationIntegration">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- configuration.AutomationIntegration -->
+      <class name="admin.CompanyCreate">
+        <methods>
+          <include name="CreateCompany"/>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- admin.CompanyCreate -->
+      <class name="employeeprofile.EmployeeDetails">
+        <methods>
+          <include name="SetupAndLogin"/>
+        </methods>
+      </class> <!-- employeeprofile.EmployeeDetails -->
+    </classes>
+  </test> <!-- CompanyCreate(failed) -->
+  <test name="AutomationIntegrationSetup(failed)" parallel="tests">
+    <classes>
+      <class name="configuration.Setup">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- configuration.Setup -->
+      <class name="admin.ClientAdminCreate">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- admin.ClientAdminCreate -->
+      <class name="configuration.AutomationIntegration">
+        <methods>
+          <include name="setup"/>
+          <include name="AdminLogin"/>
+          <include name="AutomationIntegrationSetup"/>
+        </methods>
+      </class> <!-- configuration.AutomationIntegration -->
+      <class name="admin.CompanyCreate">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- admin.CompanyCreate -->
+      <class name="employeeprofile.EmployeeDetails">
+        <methods>
+          <include name="SetupAndLogin"/>
+        </methods>
+      </class> <!-- employeeprofile.EmployeeDetails -->
+    </classes>
+  </test> <!-- AutomationIntegrationSetup(failed) -->
+  <test name="Master Data Setup(failed)" parallel="tests">
+    <classes>
+      <class name="configuration.Setup">
+        <methods>
+          <include name="CreateEmployeeCategory"/>
+          <include name="CreateRelationWithEmployee"/>
+          <include name="CreateReligion"/>
+          <include name="GeneralWorkShift"/>
+          <include name="CreateFinancialYear"/>
+          <include name="CreateBloodGroup"/>
+          <include name="CreateDepartment"/>
+          <include name="CreateQualificationLevel"/>
+          <include name="CreateMaritalStatus"/>
+          <include name="CreateWorkPlan"/>
+          <include name="CreateOrganizationStructure"/>
+          <include name="ClientAdminLogin"/>
+          <include name="CreateFunctionalApproval"/>
+          <include name="CreateLocation"/>
+          <include name="testCreateEducationalBoard"/>
+          <include name="CreateEmploymentStatus"/>
+          <include name="CreateApprovalFlow"/>
+          <include name="RosterMorningShift"/>
+          <include name="CreateDesignation"/>
+          <include name="CreateEmploymentType"/>
+          <include name="CreateOrgStructureType"/>
+          <include name="CreateGradeType"/>
+          <include name="CreateBankInformation"/>
+        </methods>
+      </class> <!-- configuration.Setup -->
+      <class name="admin.ClientAdminCreate">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- admin.ClientAdminCreate -->
+      <class name="configuration.AutomationIntegration">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- configuration.AutomationIntegration -->
+      <class name="admin.CompanyCreate">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- admin.CompanyCreate -->
+      <class name="employeeprofile.EmployeeDetails">
+        <methods>
+          <include name="SetupAndLogin"/>
+        </methods>
+      </class> <!-- employeeprofile.EmployeeDetails -->
+    </classes>
+  </test> <!-- Master Data Setup(failed) -->
+  <test name="Employee Create(failed)" parallel="tests">
+    <classes>
+      <class name="configuration.Setup">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- configuration.Setup -->
+      <class name="admin.ClientAdminCreate">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- admin.ClientAdminCreate -->
+      <class name="employeeprofile.Employee">
+        <methods>
+          <include name="EmployeeCreate"/>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- employeeprofile.Employee -->
+      <class name="configuration.AutomationIntegration">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- configuration.AutomationIntegration -->
+      <class name="admin.CompanyCreate">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- admin.CompanyCreate -->
+      <class name="employeeprofile.EmployeeDetails">
+        <methods>
+          <include name="SetupAndLogin"/>
+        </methods>
+      </class> <!-- employeeprofile.EmployeeDetails -->
+    </classes>
+  </test> <!-- Employee Create(failed) -->
+  <test name="Employee Details(failed)" parallel="tests">
+    <classes>
+      <class name="configuration.Setup">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- configuration.Setup -->
+      <class name="admin.ClientAdminCreate">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- admin.ClientAdminCreate -->
+      <class name="configuration.AutomationIntegration">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- configuration.AutomationIntegration -->
+      <class name="admin.CompanyCreate">
+        <methods>
+          <include name="ClientAdminLogin"/>
+        </methods>
+      </class> <!-- admin.CompanyCreate -->
+      <class name="employeeprofile.EmployeeDetails">
+        <methods>
+          <include name="EmergencyContract"/>
+          <include name="PreviousExperience"/>
+          <include name="BankingInfo"/>
+          <include name="ClickEmployee"/>
+          <include name="Nominee"/>
+          <include name="QualificationCreate"/>
+          <include name="IdentificationCreate"/>
+          <include name="PersonalInfo"/>
+          <include name="TrainingAndCertificationCreate"/>
+          <include name="SetupAndLogin"/>
+          <include name="FamilyMembers"/>
+          <include name="AddressCreate"/>
+          <include name="UploadDocuments"/>
+          <include name="LoginSetup"/>
+        </methods>
+      </class> <!-- employeeprofile.EmployeeDetails -->
+    </classes>
+  </test> <!-- Employee Details(failed) -->
+</suite> <!-- Failed suite [Hrcap Automation] -->
